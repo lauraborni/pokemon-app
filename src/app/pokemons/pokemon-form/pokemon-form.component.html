@@ -1,0 +1,13 @@
+<form *ngIf="pokemon" (ngSubmit)="onSubmit()" #pokemonForm="ngForm">
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <div class="card-panel">
+
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="pokemon.name" name="name" #name="ngModel">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
