@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { PokemonsService } from "../pokemons.service";
 import { Pokemon } from "../pokemon";
-import {identity} from "rxjs";
 
 @Component({
   selector: 'app-pokemon-form',
@@ -39,6 +38,16 @@ export class PokemonFormComponent implements OnInit {
         this.pokemon.types.splice(index, 1);
       }
     }
+  }
+
+  isTypesValid(type: string): boolean {
+    if (this.pokemon.types.length === 1 && this.hasType(type)) {
+      return false;
+    }
+    if (this.pokemon.types.length >= 3 && !this.hasType(type)) {
+      return false;
+    }
+    return true;
   }
 
   onSubmit() {

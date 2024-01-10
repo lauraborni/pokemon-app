@@ -9,13 +9,16 @@ export class PokemonsService {
     return POKEMONS;
   }
 
-  getPokemon(id: number) {
-    let pokemons = this.getPokemons();
-    for(let i = 0; i < pokemons.length; i++) {
-      if(id === pokemons[i].id) {
-        return pokemons[i];
-      }
-    }
+  getPokemon(id: number) : Pokemon | null {
+    // let pokemons = this.getPokemons();
+    // for(let i = 0; i < pokemons.length; i++) {
+    //   if(id === pokemons[i].id) {
+    //     return pokemons[i];
+    //   }
+    // }
+    // return null;
+
+    return this.getPokemons().find( (pokemon) => id === pokemon.id);
   }
 
   getPokemonTypes(): Array<string> {
