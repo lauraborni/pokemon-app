@@ -24,8 +24,14 @@ export class ListPokemonComponent {
     this.getPokemons();
   }
 
-  getPokemons() {
-    this.pokemons = this.pokemonsService.getPokemons();
+  // avec mock-pokemon
+  // getPokemons() {
+  //   this.pokemons = this.pokemonsService.getPokemons();
+  // }
+
+  getPokemons(): void {
+    this.pokemonsService.getPokemons()
+    .subscribe(pokemons => this.pokemons = pokemons);
   }
 
   selectPokemon(pokemon: Pokemon) {

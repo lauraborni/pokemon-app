@@ -27,15 +27,16 @@
             </td>
           </tr>
           <tr>
-            <td>Points de vie</td>
+            <td>Date de création</td>
             <td><em>{{ pokemon.created | date:"dd/MM/yyyy" }}</em></td>
           </tr>
           </tbody>
         </table>
       </div>
       <div class="card-action">
-        <a href="#" (click)="goBack()">Retour</a>
-        <a (click)="goEdit(pokemon)">Editer</a>
+        <a class="waves-effect waves-light btn" (click)="goBack()">Retour</a>
+        <a class="waves-effect waves-light btn" (click)="goEdit(pokemon)">Éditer</a>
+        <a (click)="delete(pokemon)">Supprimer</a>
       </div>
     </div>
   </div>

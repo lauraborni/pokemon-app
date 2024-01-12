@@ -10,6 +10,9 @@ import { PokemonsService } from "./pokemons.service";
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 import {FormsModule} from "@angular/forms";
+import { LoginPokemonComponent } from './login-pokemon/login-pokemon.component';
+import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
+import { SearchPokemonComponent } from './search-pokemon/search-pokemon.component';
 
 
 
@@ -21,7 +24,10 @@ import {FormsModule} from "@angular/forms";
     BorderCardDirective,
     PokemonTypeColorPipe,
     PokemonFormComponent,
-    EditPokemonComponent
+    EditPokemonComponent,
+    LoginPokemonComponent,
+    AddPokemonComponent,
+    SearchPokemonComponent
   ],
   imports: [
     CommonModule,
