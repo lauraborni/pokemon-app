@@ -29,7 +29,7 @@ export class DetailPokemonComponent implements OnInit {
   }
 
   goBack() {
-    window.history.back();
+    this.router.navigate(['/pokemon/all'])
   }
 
   goEdit(pokemon: Pokemon) {

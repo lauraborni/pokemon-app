@@ -8,13 +8,16 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PokemonsModule } from "./pokemons/pokemons.module";
-import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
-import {InMemoryDataService} from "./in-memory-data.service";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./in-memory-data.service";
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +25,11 @@ import {InMemoryDataService} from "./in-memory-data.service";
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,
-      { dataEncapsulation : false })
+      {dataEncapsulation: false}),
+    FormsModule
   ],
   providers: [],
+  exports: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

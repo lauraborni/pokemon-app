@@ -13,6 +13,8 @@ import {FormsModule} from "@angular/forms";
 import { LoginPokemonComponent } from './login-pokemon/login-pokemon.component';
 import { AddPokemonComponent } from './add-pokemon/add-pokemon.component';
 import { SearchPokemonComponent } from './search-pokemon/search-pokemon.component';
+import {LoaderComponent} from "../loader/loader.component";
+import {AuthGuardService} from "../auth-guard.service";
 
 
 
@@ -27,13 +29,14 @@ import { SearchPokemonComponent } from './search-pokemon/search-pokemon.componen
     EditPokemonComponent,
     LoginPokemonComponent,
     AddPokemonComponent,
-    SearchPokemonComponent
+    SearchPokemonComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
     PokemonsRoutingModule,
     FormsModule
   ],
-  providers: [PokemonsService]
+  providers: [PokemonsService, AuthGuardService]
 })
 export class PokemonsModule { }
